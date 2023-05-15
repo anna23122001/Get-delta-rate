@@ -8,7 +8,9 @@
  */
 
 function getWinnerRating(winnerRating, opponentRating){
-
+  if(isNaN(winnerRating) || isNaN(opponentRating)){
+    return "it is not a number!";
+  };
     if(winnerRating < 0 ||  opponentRating < 0){
         return "Error";
     }
@@ -33,7 +35,7 @@ function getWinnerRating(winnerRating, opponentRating){
         const contribution = (opponentRating - winnerRating + 5) / 3;
     return winnerRating + contribution;
 }
-    const winnerRating = 20;
+    const winnerRating = "hsdbvhkb";
     const opponentRating = 18;
   
     const result = getWinnerRating(winnerRating, opponentRating);
